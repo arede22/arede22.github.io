@@ -58,6 +58,12 @@ export default function Portfolio({ theme }) {
           <Box>
             <H3Style> Extensions of Class Projects </H3Style>
             <ULWrapper>
+              <LIWrapper> Ancient Indian Astronomy Machine Learning Model
+                <p>
+                  <StyledLink href="https://youtu.be/2C_ckxoXi0E" target="_blank" rel="nofollow noopener noreferrer"> Presentation </StyledLink>
+                </p>
+              </LIWrapper>
+
               <LIWrapper> Voice-Activated Car -- Designing Information Devices/Systems Trained with PCA
                 <Modal trigger="car" img={imgSrcs.car} alt={altText(imgSrcs.car)} />
               </LIWrapper>

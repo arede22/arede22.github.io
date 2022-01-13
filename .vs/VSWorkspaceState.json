@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\pages",
+    "\\public",
+    "\\public\\static",
+    "\\public\\static\\portfolio",
+    "\\src",
+    "\\src\\components",
+    "\\src\\mainComponents",
+    "\\src\\styles",
+    "\\testing"
+  ],
+  "SelectedNode": "\\public\\static\\portfolio\\ai",
+  "PreviewInSolutionExplorer": false
+}

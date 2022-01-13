@@ -1,9 +1,11 @@
-// general imports
 import React from "react";
 import styled from 'styled-components';
-// styles
-import { theme } from '@styles';
-const { colors, fontSizes } = theme;
+
+const ImgStyle = styled.img`
+  height: 70%;
+  width: 70%;
+  max-width: 300px;
+`;
 
 const _loaded = {};
 
@@ -36,7 +38,7 @@ class ImageLoader extends React.Component {
       ? loadedClassName
       : loadingClassName}`;
 
-    return <img
+    return <ImgStyle
              src={this.props.src}
              onClick={this.props.onClick}
              className={className}

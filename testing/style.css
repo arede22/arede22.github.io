@@ -1,4 +1,42 @@
-body {
+body, html {
+  height: 100%;
+}
+.parallax {
+  /* The image used */
+  background-image: url("../public/static/genImages/fbcoverpic.jpg");
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+.parallax2 {
+  background-image: url("../public/static/genImages/rainbow.jpg");
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+/* body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -6,7 +44,7 @@ body {
 div {
   margin: 0 auto;
   padding: 15px;
-}
+} */
 .div1 {
   background-color: pink;
   margin-top: 0px;

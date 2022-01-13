@@ -1,11 +1,10 @@
 // general imports
 import styled from 'styled-components';
 // styles
-import { theme } from '@styles';
-const { colors } = theme;
+import { colors } from '@styles';
 
-const LIWrapper = styled.li`
-  background-color: ${colors.halfTransparentGray};
+const Box = styled.div`
+  background-color: ${({ theme }) => theme.boxColor };
   overflow-x: auto;
   padding: 7.5px 20px 20px;
   width: 70%;
@@ -13,4 +12,4 @@ const LIWrapper = styled.li`
   margin-bottom: 30px;
 `;
 
-export default LIWrapper;
+export default Box;

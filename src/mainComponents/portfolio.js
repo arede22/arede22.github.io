@@ -1,12 +1,13 @@
 // general imports
 import React from 'react';
+import { object } from 'prop-types';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazy-load';
 // components
 import { ImageLoader, Modal } from '@components';
 // styles
-import { theme, media, Anchor, Link, Box } from '@styles';
-const { colors, fontSizes, hrefs, imgSrcs } = theme;
+import { theme, media, Box } from '@styles';
+const { fontSizes, hrefs, imgSrcs } = theme;
 // Currently exploring pet projects
 
 // styles and wrappers
@@ -22,41 +23,25 @@ const H3Style = styled.h3`
   font-size: ${fontSizes.sm3};
 `;
 const ULWrapper = styled.ul`
-  color: white;
   padding: 0 40px;
 `;
 const LIWrapper = styled.li`
   margin: 5px 0px;
 `;
-const PStyle = styled.p`
-  text-align: center;
-  margin: 0 auto;
-`;
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   text-align: center;
 `;
 const SpaceBetween = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-// tree https://www.w3schools.com/html/html_images_imagemap.asp
-// tooltip for tree https://www.w3schools.com/howto/howto_css_tooltip.asp
+// https://interactive-img.com/dashboard
+// https://intercom.help/geniallysupport/en/articles/3542392-turn-your-static-images-into-incredible-interactive-images-quickly-and-easily
+
+// https://www.w3schools.com/bootstrap/bootstrap_grid_basic.asp
 
 // Projects&Portfolio Interactive Tree -- class extensions, work, club --> see more pages somehow
 // next is blogscape
-
-// <LazyLoad debounce={false}
-// offsetVertical={500}><ImgStyle src={imgSrcs.tree} alt="interactive tree" usemap='#imagemap' />
-// <map name="imagemap">
-//   <area shape="circle" coords="213.6,75,122" alt="Car" href={hrefs.carRepo} />
-//   <area shape="circle" coords="300,189,119" alt="Maps" />
-//   <area shape="circle" coords="182,193.7,102" alt="GameDev" href={hrefs.gameVid} />
-//   <area shape="circle" coords="138.5,298.5,118.6" alt="Website" href={hrefs.webRepo} />
-//   <area shape="circle" coords="413,158,92" alt="ML Decal" href={hrefs.mlDecalRepo} />
-//   <area shape="circle" coords="397,257.8,93.8" alt="NLP" />
-//   <area shape="circle" coords="330,80,98.6" alt="Etc" />
-// </map>
-// </LazyLoad>
 
 // export main component
 export default function Portfolio({ theme }) {
@@ -67,28 +52,34 @@ export default function Portfolio({ theme }) {
 
   return (
     <React.Fragment>
-      <Anchor name="Portfolio" id="portfolio-anchor"></Anchor>
+      <a name="Portfolio" id="portfolio-anchor"></a>
       <div>
         <H2Style> Portfolio </H2Style>
           <Box>
             <H3Style> Extensions of Class Projects </H3Style>
             <ULWrapper>
+              <LIWrapper> Ancient Indian Astronomy Machine Learning Model
+                <p>
+                  <StyledLink href="https://youtu.be/2C_ckxoXi0E" target="_blank" rel="nofollow noopener noreferrer"> Presentation </StyledLink>
+                </p>
+              </LIWrapper>
+
               <LIWrapper> Voice-Activated Car -- Designing Information Devices/Systems Trained with PCA
-                <Modal trigger="car" img={imgSrcs.car} pop="popCar" content="img01" alt={altText(imgSrcs.car)} />
+                <Modal trigger="car" img={imgSrcs.car} alt={altText(imgSrcs.car)} />
               </LIWrapper>
 
               <LIWrapper> Mock GoogleMaps Berkeley-Localized -- Map Rastering, Autocomplete and Search, and Navigation
-                <Modal trigger="map" img={imgSrcs.map} pop="popMap" content="img02" alt={altText(imgSrcs.map)} />
+                <Modal trigger="map" img={imgSrcs.map} alt={altText(imgSrcs.map)} />
               </LIWrapper>
 
               <LIWrapper> Pixel Art Game -- Randomized Room Generation and Increasing Difficulty to Boss Level:
                 <SpaceBetween>
-                  <Modal trigger="randRooms" img={imgSrcs.randRooms} pop="popRandRooms" content="img03" alt={altText(imgSrcs.randRooms)} />
-                  <Modal trigger="boss" img={imgSrcs.boss} pop="popBoss" content="img04" alt={altText(imgSrcs.boss)} />
+                  <Modal trigger="randRooms" img={imgSrcs.randRooms} alt={altText(imgSrcs.randRooms)} />
+                  <Modal trigger="boss" img={imgSrcs.boss} alt={altText(imgSrcs.boss)} />
                 </SpaceBetween>
-                <PStyle>
+                <p>
                   <StyledLink href={hrefs.gameVid} target="_blank" rel="nofollow noopener noreferrer"> Click here for DEMO </StyledLink>
-                </PStyle>
+                </p>
               </LIWrapper>
             </ULWrapper>
           </Box>
@@ -122,6 +113,13 @@ export default function Portfolio({ theme }) {
             </ULWrapper>
           </Box>
       </div>
+      {/*<div dangerouslySetInnerHTML={{
+        __html: "<applet code='/gamecode/proj3/byow/Core/Main.class' width='300' height='300'> Can't load </applet>" // the whole markup string you want to inject
+      }}></div>*/}
     </React.Fragment>
   )
 };
+
+Portfolio.propTypes = {
+  theme: object.isRequired
+}

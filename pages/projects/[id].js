@@ -4,8 +4,10 @@ import { getAllProjectIds, getProjectData } from 'lib/projects'
 // components
 import { Header } from '@mainComponents';
 // styles
-import { theme, useDarkMode, ErrorGlobal } from '@styles';
+import { theme, useDarkMode, ProjectsGlobal } from '@styles';
 const { lightTheme, darkTheme } = theme;
+
+// https://www.w3schools.com/bootstrap/bootstrap_pagination.asp
 
 export default function Project({ projectData }) {
   const [theme, toggleTheme, componentMounted] = useDarkMode();
@@ -17,6 +19,7 @@ export default function Project({ projectData }) {
 
   return (
     <ThemeProvider theme={themeMode}>
+      <ProjectsGlobal />
       <Header title={projectData.title} />
 
       <h1> Projects ❤ </h1>

@@ -2,8 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // styles
-import { theme } from '@styles';
-const { colors } = theme;
+import { colors } from '@styles';
 // flexbox: calhacks.org/flexbox
 // position: relative; --> to make B move relative to A and C divs
 // material design, bootstrap, css tricks, mdn web docs

@@ -1,14 +1,15 @@
 // general imports
+import { number } from 'prop-types';
 import styled from 'styled-components';
 // styles
-import { theme, Link } from '@styles';
-const { hrefs, fontSizes, colors, iconSrcs } = theme;
+import { theme } from '@styles';
+const { hrefs, fontSizes, iconSrcs } = theme;
 
 const GithubWrapper = styled.div`
   width: 70%;
   margin: 0 auto;
 `;
-const GithubLink = styled(Link)`
+const GithubLink = styled.a`
   font-size: ${fontSizes.sm1};
 `;
 const StyledGitHubInfo = styled.div`
@@ -39,4 +40,9 @@ export default function GithubInfo({ stars, forks }) {
       </GithubLink>
     </GithubWrapper>
   )
+}
+
+GithubInfo.propTypes = {
+  stars: number.isRequired,
+  forks: number.isRequired,
 }

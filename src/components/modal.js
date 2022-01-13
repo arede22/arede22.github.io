@@ -1,4 +1,5 @@
 // general imports
+import { string } from 'prop-types';
 import styled from 'styled-components';
 import LazyLoad from 'react-lazy-load';
 // components
@@ -10,22 +11,25 @@ const ImgWrapper = styled.a`
   margin: 0 auto;
   width: 90%;
 `;
-const ImgStyle = styled.img`
-  height: 70%;
-  width: 70%;
-  max-width: 300px;
-`;
 // W3 Modal
+// https://www.w3schools.com/bootstrap/bootstrap_modal.asp
+// https://www.w3schools.com/bootstrap/bootstrap_carousel.asp
 
 // export main component
 export default function Modal({ trigger, img, alt }) {
   return (
     <ImgWrapper>
       <LazyLoad
-      debounce={false}
-      offsetVertical={500}>
-        <ImgStyle id={trigger} src={img} alt={alt}/>
+        debounce={false}
+        offsetVertical={100}>
+        <ImageLoader id={trigger} src={img} alt={alt} />
       </LazyLoad>
     </ImgWrapper>
   )
 };
+
+Modal.propTypes = {
+  trigger: string.isRequired,
+  img: string.isRequired,
+  alt: string.isRequired,
+}

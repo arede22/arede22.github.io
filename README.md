@@ -20,25 +20,27 @@
   - Git and LOC calls
   - Finalize design ideas, modify @styles, nav, welcome, intro, contactme, and footer toward that end
   - blogs/projects pages created for in-depth details
+  - standardized (global) styles
 
 ## Yet to-do:
-  - Fixup content, pics, project boxes, standardize styles and projects/blogs global styles
-  - LOC, progress bars, trees, timeline, social media display
+  - Fixup content and project boxes
+  - colors: https://graf1x.com/shades-of-blue-color-palette/ (want to sleek this ish up)
+  - progress bars, trees, timeline, social media display
   - Think of portfolio and info layouts + act on it
   - Lazy loading: https://css-tricks.com/the-complete-guide-to-lazy-loading-images/, https://css-tricks.com/snippets/javascript/lazy-loading-images/, https://css-tricks.com/tips-for-rolling-your-own-lazy-loading/, https://medium.com/@rossbulat/lazy-image-loading-in-react-the-full-breakdown-4026619de2df
 
-  - Anchorpoints also change url for ##section
   - Get color palette and apply
   - Pre-loading for Git and LOC calls: https://nextjs.org/docs/basic-features/data-fetching##getstaticprops-static-generation, https://nextjs.org/docs/basic-features/data-fetching##getserversideprops-server-side-rendering
 
   - Animation gif for loading screen
   - Accessibility
+  - Dockerize? https://medium.com/swlh/dockerize-your-next-js-application-91ade32baa6
 
 ## Main to-dos:
   - Make compatible with different media
   - See if necessary to incorporate react-dom, react-router, react bootstrap, etc.
   - Javascript and Ajax scripts
-  - Add in Github, Spotify, Youtube, and Instagram API calls (figure out how to let api call load before assigning text)
+  - Add in Github, Spotify, Youtube, and Instagram API calls (figure out how to let api call load before assigning text) https://developer.spotify.com/documentation/widgets/guides/adding-a-spotify-play-button/, spotify widgets or web playback sdk
   - Theming: Light/Dark
   - Page loader
   - Lazy loading

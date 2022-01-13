@@ -1,15 +1,15 @@
 // general imports
-// import { string } from 'prop-types';
+import { object } from 'prop-types';
 import styled from 'styled-components';
 // styles
 import { theme } from '@styles';
-const { colors, fontSizes } = theme;
+const { fontSizes } = theme;
 
 // styles and wrappers
 const Button = styled.button`
   display: none;
   right: 30px;
-  background-color: ${({ lightTheme }) => lightTheme ? colors.palePink : colors.cerulean };
+  background-color: ${({ theme }) => theme.buttonBg };
   position: fixed;
   bottom: 20px;
   z-index: 99;
@@ -18,10 +18,10 @@ const Button = styled.button`
   padding: 15px;
   border-radius: 30px;
   font-size: ${fontSizes.sm1};
-  color: ${({ theme }) => theme.textColor};
+  color: ${({ lightTheme }) => lightTheme ? 'black' : 'white'};
 
   &:hover {
-    background-color: ${({ lightTheme }) => lightTheme ? colors.darkPalePink : colors.darkCerulean };
+    background-color: ${({ theme }) => theme.buttonHoverBg };
   }
 
   @media (max-width: 600px) {
@@ -37,10 +37,10 @@ const ImgStyle = styled.img`
 export default function TopButton({ theme, isLight }) {
 
   return (
-    <Button id="scrolltop" lightTheme={isLight}>Top <ImgStyle src={theme.up} /></Button>
+    <Button id="scrolltop" lightTheme={isLight} >Top <ImgStyle src={theme.up} /></Button>
   )
 };
 
-// TopButton.propTypes = {
-//   theme: string.isRequired
-// }
+TopButton.propTypes = {
+  theme: object.isRequired
+}

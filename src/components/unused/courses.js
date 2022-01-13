@@ -2,15 +2,7 @@
 import styled from 'styled-components';
 // styles
 import { theme, Box } from '@styles';
-const { colors, fontSizes } = theme;
-
-// styles and wrappers
-const ULWrapper = styled.ul`
-`;
-const LIWrapper = styled.li`
-`;
-const H3Style = styled.h3`
-`;
+const { fontSizes } = theme;
 
 // export main component
 export default function Courses() {

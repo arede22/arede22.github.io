@@ -1,9 +1,10 @@
 // general imports
 import React from 'react';
+import { object } from 'prop-types';
 import styled from 'styled-components';
 // styles
-import { theme, Anchor } from '@styles';
-const { colors, fontSizes } = theme;
+import { theme } from '@styles';
+const { fontSizes } = theme;
 
 // styles and wrappers
 const StyledWrapper = styled.div`
@@ -17,7 +18,7 @@ const H2Style = styled.h2`
 `;
 const ContactBox = styled.div`
   margin: 10px auto;
-  background-color: ${colors.transparentSeaBlue};
+  background-color: ${({ theme }) => theme.roundedBoxColor };
   width: 60%;
   border-radius: 15px;
   padding: 25px 20px;
@@ -27,8 +28,6 @@ const ContactBox = styled.div`
   }
 `;
 const PStyle = styled.p`
-  line-height: 1.5;
-  text-align: center;
   font-size: ${fontSizes.sm3};
   text-shadow: black 1px 1px;
 
@@ -41,16 +40,20 @@ const PStyle = styled.p`
 export default function ContactMe({ theme }) {
   return (
     <React.Fragment>
-      <Anchor name="Contact-Me" id="contactme-anchor"></Anchor>
+      <a name="Contact-Me" id="contactme-anchor"></a>
       <StyledWrapper>
         <H2Style> Contact Me </H2Style>
         <ContactBox>
           <PStyle>
-            Thank you for browsing through my website! <br />
-            My contact info is below, e-mail works best for me!
+            Thank you for browsing through my website!
+            <br /> My contact info is below, e-mail works best for me!
           </PStyle>
         </ContactBox>
       </StyledWrapper>
     </React.Fragment>
   )
 };
+
+ContactMe.propTypes = {
+  theme: object.isRequired
+}

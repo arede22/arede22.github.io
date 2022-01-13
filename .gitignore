@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# game code
+/gamecode/
+
 # production
 /build
 

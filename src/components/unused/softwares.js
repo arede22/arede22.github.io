@@ -1,8 +1,7 @@
 // general imports
 import styled from 'styled-components';
 // styles
-import { theme, Box } from '@styles';
-const { colors } = theme;
+import { colors, Box } from '@styles';
 
 // styles and wrappers
 const Rows = styled.ul`

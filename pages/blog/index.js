@@ -2,7 +2,7 @@
 import { ThemeProvider } from 'styled-components';
 // components
 import { Header } from '@mainComponents';
-import { theme, useDarkMode, GlobalStyle } from '@styles';
+import { theme, useDarkMode, BlogGlobal } from '@styles';
 const { lightTheme, darkTheme, imgSrcs } = theme;
 // blog https://nextjs.org/learn/basics/navigate-between-pages/pages-in-nextjs
 
@@ -16,7 +16,7 @@ export default function Blog() {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <GlobalStyle />
+      <BlogGlobal />
       <Header title="BLOG ❤" />
 
       <h1> BLOG ❤ </h1>

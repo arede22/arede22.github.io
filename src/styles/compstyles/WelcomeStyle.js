@@ -1,8 +1,7 @@
 // general imports
-import React from 'react';
 import styled from 'styled-components';
 // styles
-import theme from './theme';
+import { theme } from '@styles';
 const { fontSizes } = theme;
 
 const WelcomeStyle = styled.div`

@@ -1,13 +1,14 @@
 export { default as theme } from './theme';
+export { default as colors } from './colors';
 export { default as media } from './media';
 export { default as useDarkMode } from './useDarkMode';
-export { default as GlobalStyle } from './GlobalStyle';
-export { default as ErrorGlobal } from './ErrorGlobal';
-export { default as WelcomeStyle } from './WelcomeStyle';
-export { default as ResumeBox } from './ResumeBox';
-export { default as StyledWrapper } from './StyledWrapper';
-export { default as H1Style } from './H1Style';
-export { default as Box } from './box';
-export { default as Link } from './Link';
-export { default as Anchor } from './Anchor';
-export { default as Button } from './Button';
+export { default as fadeInImg } from './fadeInImg';
+
+export { default as GlobalStyle } from './globalstyles/GlobalStyle';
+export { default as ErrorGlobal } from './globalstyles/ErrorGlobal';
+export { default as BlogGlobal } from './globalstyles/BlogGlobal';
+export { default as ProjectsGlobal } from './globalstyles/ProjectsGlobal';
+
+export { default as WelcomeStyle } from './compstyles/WelcomeStyle';
+export { default as ResumeBox } from './compstyles/ResumeBox';
+export { default as Box } from './compstyles/box';

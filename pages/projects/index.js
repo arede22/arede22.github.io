@@ -2,7 +2,7 @@
 import { ThemeProvider } from 'styled-components';
 // components
 import { Header } from '@mainComponents';
-import { theme, useDarkMode, GlobalStyle } from '@styles';
+import { theme, useDarkMode, ProjectsGlobal } from '@styles';
 const { lightTheme, darkTheme, imgSrcs } = theme;
 
 export default function Projects() {
@@ -15,7 +15,7 @@ export default function Projects() {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <GlobalStyle />
+      <ProjectsGlobal />
       <Header title="Details on Projects" />
 
       <h1> Projects </h1>

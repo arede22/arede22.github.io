@@ -1,9 +1,10 @@
 // general imports
 import { useState, useEffect } from 'react';
+import { object } from 'prop-types';
 import styled from 'styled-components';
 // styles
-import { theme, Link } from '@styles';
-const { colors, hrefs, fontSizes, iconSrcs } = theme;
+import { theme } from '@styles';
+const { hrefs, fontSizes, iconSrcs } = theme;
 // stackoverflow, hackerrank, spotify
 // CALHACKS
 // dailycal
@@ -34,10 +35,10 @@ const FooterStyle = styled.footer`
   margin: 25px auto;
 `;
 const ULWrapper = styled.ul`
-  background-color: ${colors.transparentGray};
+  background-color: ${({ theme }) => theme.footerBg };
   display: flex;
   justify-content: space-around;
-  border-top: 3px solid ${colors.lightGray};
+  border-top: 3px solid ${({ theme }) => theme.footerBorder };
   padding: 10px 25px;
   margin: 10px 15px;
   margin-top: 0;
@@ -45,9 +46,6 @@ const ULWrapper = styled.ul`
 const LIWrapper = styled.li`
   display: flex;
   padding: 10px 15px;
-`;
-const PStyle = styled.p`
-  text-align: center;
 `;
 const ImgStyle = styled.img`
   margin: 0 auto;
@@ -97,11 +95,15 @@ export default function Footer({ theme }) {
           <GithubInfo stars={githubInfo.stars} forks={githubInfo.forks} />
         }
         <StyledWrapper>
-          <PStyle>
-            Made by Anika Rede | <Link target="_blank" href={hrefs.webRepo} rel="nofollow noopener noreferrer"> GitHub </Link>
-          </PStyle>
+          <p>
+            Made by Anika Rede | <a target="_blank" href={hrefs.webRepo} rel="nofollow noopener noreferrer"> GitHub </a>
+          </p>
         </StyledWrapper>
       </FooterStyle>
     </StyledWrapper>
   )
 };
+
+Footer.propTypes = {
+  theme: object.isRequired
+}

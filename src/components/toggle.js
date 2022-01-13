@@ -1,9 +1,9 @@
 // general imports
-// import { func, string } from 'prop-types';
+import { func, bool } from 'prop-types';
 import styled from 'styled-components';
 // styles
 import { theme } from '@styles';
-const { colors, fontSizes } = theme;
+const { fontSizes } = theme;
 
 // styles and wrappers
 const ToggleContainer = styled.button`
@@ -31,13 +31,13 @@ const ToggleContainer = styled.button`
   }
 `;
 
-export default function Toggle({ theme, toggleTheme, isLight }) {
+export default function Toggle({ toggleTheme, isLight }) {
   return (
     <ToggleContainer onClick={toggleTheme} lightTheme={isLight}>Theme</ToggleContainer>
   )
 };
 
-// Toggle.propTypes = {
-//   theme: string.isRequired,
-//   toggleTheme: func.isRequired,
-// }
+Toggle.propTypes = {
+  toggleTheme: func.isRequired,
+  isLight: bool.isRequired,
+}

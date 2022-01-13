@@ -4,7 +4,7 @@ import { getAllPostIds, getPostData } from 'lib/posts'
 // components
 import { Header } from '@mainComponents';
 // styles
-import { theme, useDarkMode, ErrorGlobal } from '@styles';
+import { theme, useDarkMode, BlogGlobal } from '@styles';
 const { lightTheme, darkTheme } = theme;
 
 export default function Post({ postData }) {
@@ -17,6 +17,7 @@ export default function Post({ postData }) {
 
   return (
     <ThemeProvider theme={themeMode}>
+      <BlogGlobal />
       <Header title={postData.title} />
 
       <h1> BLOG ❤ </h1>

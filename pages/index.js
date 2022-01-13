@@ -23,7 +23,7 @@ export default function Home() {
       <GlobalStyle />
       <Header title="Anika Rede: Software Engineer" />
 
-      <Nav theme={themeMode}/>
+      <Nav />
 
       <Welcome theme={themeMode} />
       <Intro theme={themeMode} />
@@ -33,7 +33,7 @@ export default function Home() {
       <Footer theme={themeMode} />
 
       <TopButton theme={themeMode} isLight={isLight} />
-      {/*<Toggle theme={theme} toggleTheme={toggleTheme} isLight={isLight} />*/}
+      {/*<Toggle toggleTheme={toggleTheme} isLight={isLight} />*/}
 
     </ThemeProvider>
   )

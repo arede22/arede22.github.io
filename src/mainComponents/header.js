@@ -19,12 +19,20 @@ export default function Header({ title }) {
       <link rel="icon" type="image/x-icon" href='/static/favicon/dark/favicon.ico' />
       <link rel="manifest" href="/static/favicon/site.webmanifest"/>
 
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
-
       <title>{title}</title>
 
-      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
-      {/*<script src="/static/scripts/jquery-3.5.1.min.js" type="text/javascript"></script>*/}
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald" />
+
+      {/* Latest compiled and minified CSS */}
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+      {/* jQuery library */}
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+      {/* Latest compiled JavaScript */}
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+      {/*<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>*/}
 
       <script src="/static/scripts/nav-up.js" type="text/javascript"></script>
       <script src="/static/scripts/anchor-assignment.js" type="text/javascript"></script>

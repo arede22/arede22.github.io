@@ -2,10 +2,8 @@
 import styled from 'styled-components';
 // components
 import { Banner, StyledNav } from '@components';
-// styles
-import { theme } from '@styles';
-const { colors, fontSizes } = theme;
 // dropdown fix: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar
+// https://www.w3schools.com/bootstrap/bootstrap_dropdowns.asp
 
 // styles and wrappers
 const HeaderWrap = styled.header`
@@ -14,10 +12,11 @@ const HeaderWrap = styled.header`
   transition: top 0.2s ease-in-out;
   width: 100%;
   margin: 0 auto;
+  text-align: center;
 `;
 
 // export main component
-export default function Nav({ theme }) {
+export default function Nav() {
   return (
     <HeaderWrap id="navbar">
       <Banner />

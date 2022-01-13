@@ -1,33 +1,36 @@
 // general imports
 import { createGlobalStyle } from 'styled-components';
-import media from './media';
+import { theme } from '@styles';
 // styles
-import theme from './theme';
-const { fonts, fontSizes } = theme;
+const { fonts, fontSizes, imgSrcs } = theme;
 
-const ErrorGlobal = createGlobalStyle`
+const ProjectsGlobal = createGlobalStyle`
   html, body {
+    margin: 0;
     font-size: ${fontSizes.sm3};
     font-family: ${fonts.Lucida};
-    background: ${({ theme }) => theme.body};
+    background: ${({ theme }) => theme.body} url(${imgSrcs.berk});
     color: ${({ theme }) => theme.textColor};
-    position: relative;
-    margin: 0;
     height: 100%;
-    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: 1366px) {
+      background-attachment: scroll;
+    }
   }
   h1, p {
     text-align: center;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
   }
   h1 {
    font-family: ${fonts.Oswald};
    text-transform: uppercase;
    text-shadow: black 2px 2px;
    font-size: ${fontSizes.lg};
-   top: 40%;
 
     @media (max-width: 600px) {
       font-size: ${fontSizes.med2};
@@ -36,7 +39,6 @@ const ErrorGlobal = createGlobalStyle`
   p {
     font-size: ${fontSizes.sm1};
     text-shadow: black .5px .5px;
-    top: 50%;
 
     @media (max-width: 600px) {
       font-size: ${fontSizes.sm0};
@@ -45,4 +47,4 @@ const ErrorGlobal = createGlobalStyle`
 `;
 
 // export
-export default ErrorGlobal;
+export default ProjectsGlobal;
